@@ -1,29 +1,29 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
 int taskOne() {
-    //Створюємо змінні
+    //РЎС‚РІРѕСЂСЋС”РјРѕ Р·РјС–РЅРЅС–
     int arrA[9999]{}, arrB[9999]{};
     int n, i, j;
     j = 0;
 
-    //Вводимо розмір масиву
+    //Р’РІРѕРґРёРјРѕ СЂРѕР·РјС–СЂ РјР°СЃРёРІСѓ
     cout << "Input size of array:" << endl;
     cin >> n;
 
-    //Вводимо елементи масиву А
+    //Р’РІРѕРґРёРјРѕ РµР»РµРјРµРЅС‚Рё РјР°СЃРёРІСѓ Рђ
     cout << "Input elements for array A:" << endl;
     for (i = 0; i < n; i++) {
         cin >> arrA[i];
     }
 
-    //Виводимо елементи масиву А
+    //Р’РёРІРѕРґРёРјРѕ РµР»РµРјРµРЅС‚Рё РјР°СЃРёРІСѓ Рђ
     cout << "Array A:" << endl;
     for (i = 0; i < n; i++) {
         cout << arrA[i] << endl;
     }
 
-    //Заповнюємо масив В
+    //Р—Р°РїРѕРІРЅСЋС”РјРѕ РјР°СЃРёРІ Р’
     for (i = 1; i < n; i++) {
         if (i < 10 || i % 10 != 0) {
             arrB[j] = arrA[i];
@@ -31,7 +31,7 @@ int taskOne() {
         }
     }
 
-    //Виводимо масив В
+    //Р’РёРІРѕРґРёРјРѕ РјР°СЃРёРІ Р’
     cout << "Array B:" << endl;
     for (i = 0; i < j; i++) {
         cout << arrB[i] << endl;
@@ -40,25 +40,25 @@ int taskOne() {
 }
 
 int taskTwo(){
-    //Створюємо змінні
+    //РЎС‚РІРѕСЂСЋС”РјРѕ Р·РјС–РЅРЅС–
     int arr[9999]{};
     int x, i, n, j=0, k=0, maxone=-9999, maxtwo=-9999;
 
-    //Визначаємо розмір масиву
+    //Р’РёР·РЅР°С‡Р°С”РјРѕ СЂРѕР·РјС–СЂ РјР°СЃРёРІСѓ
     cout << "Input size of array:" << endl;
     cin >> n;
 
-    //Вводимо елементи масиву
+    //Р’РІРѕРґРёРјРѕ РµР»РµРјРµРЅС‚Рё РјР°СЃРёРІСѓ
     cout << "Input elements of array:" << endl;
     for (i = 0; i < n; i++) {
         cin >> arr[i];
     }
 
-    //Вводимо число Х
+    //Р’РІРѕРґРёРјРѕ С‡РёСЃР»Рѕ РҐ
     cout << "Input number X:" << endl;
     cin >> x;
 
-    //Визначаємо перше число менше за визначене число Х
+    //Р’РёР·РЅР°С‡Р°С”РјРѕ РїРµСЂС€Рµ С‡РёСЃР»Рѕ РјРµРЅС€Рµ Р·Р° РІРёР·РЅР°С‡РµРЅРµ С‡РёСЃР»Рѕ РҐ
     for (i = 0; i < n; i++) {
         if (arr[i]<0 && arr[i]<x && arr[i]>maxone) {
             maxone = arr[i];
@@ -67,11 +67,11 @@ int taskTwo(){
         }
     }
 
-    //Виводимо число менше за число Х та його позицію
+    //Р’РёРІРѕРґРёРјРѕ С‡РёСЃР»Рѕ РјРµРЅС€Рµ Р·Р° С‡РёСЃР»Рѕ РҐ С‚Р° Р№РѕРіРѕ РїРѕР·РёС†С–СЋ
     cout << "First value smaller than X and his position:" << endl;
     cout << maxone << "," << j << endl;
 
-    //Визначаємо найбільше число менше зе перше менше число 
+    //Р’РёР·РЅР°С‡Р°С”РјРѕ РЅР°Р№Р±С–Р»СЊС€Рµ С‡РёСЃР»Рѕ РјРµРЅС€Рµ Р·Рµ РїРµСЂС€Рµ РјРµРЅС€Рµ С‡РёСЃР»Рѕ 
     for (i = 0; i < n; i++) {
         if(arr[i] > maxtwo && arr[i] < maxone){
             maxtwo = arr[i];
@@ -79,7 +79,7 @@ int taskTwo(){
         }
     }
 
-    //Виводимо число та його позицію
+    //Р’РёРІРѕРґРёРјРѕ С‡РёСЃР»Рѕ С‚Р° Р№РѕРіРѕ РїРѕР·РёС†С–СЋ
     cout << "Max value smaller then first value smaller than X and his position:" << endl;
     cout << maxtwo << "," << k << endl;
     return 0;
@@ -87,18 +87,18 @@ int taskTwo(){
 
 int main()
 {
-    //Створюємо змінні та пояснюємо завдання
+    //РЎС‚РІРѕСЂСЋС”РјРѕ Р·РјС–РЅРЅС– С‚Р° РїРѕСЏСЃРЅСЋС”РјРѕ Р·Р°РІРґР°РЅРЅСЏ
     int task;
     cout << "First task: From one-dimensional array A of size N, construct array B without zero elements." << endl;
     cout << endl;
     cout << "Second task: Find the maximum value among the negative elements located to the first element, smaller than the given number X." << endl;
     cout << endl;
 
-    //Вибір завдання
+    //Р’РёР±С–СЂ Р·Р°РІРґР°РЅРЅСЏ
     cout << "Select a task(1 or 2):" << endl;
     cin >> task;
 
-    //Виклик функції
+    //Р’РёРєР»РёРє С„СѓРЅРєС†С–С—
     if (task == 1) {
         cout << "You have chosen the first task" << endl;
         taskOne();
