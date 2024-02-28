@@ -4,7 +4,7 @@ using namespace std;
 int taskOne() {
     //Створюємо змінні
     int arrA[9999]{}, arrB[9999]{};
-    int n, i, j;
+    int n, i, j, l;
     j = 0;
 
     //Вводимо розмір масиву
@@ -63,6 +63,7 @@ int taskTwo(){
         if (arr[i]<0 && arr[i]<x && arr[i]>maxone) {
             maxone = arr[i];
             j = i;
+            l = i;
             break;
         }
     }
@@ -72,7 +73,7 @@ int taskTwo(){
     cout << maxone << "," << j << endl;
 
     //Визначаємо найбільше число менше зе перше менше число 
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < l; i++) {
         if(arr[i] > maxtwo && arr[i] < maxone){
             maxtwo = arr[i];
             k = i;
